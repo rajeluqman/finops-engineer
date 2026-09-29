@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Malaysia FinOps Engineer Vacancy",
+  "type": "object",
+  "required": ["vacancy_id", "company", "job_title", "location", "job_url", "source", "date_checked", "active_status"],
+  "properties": {
+    "vacancy_id": {"type": "string"},
+    "company": {"type": "string"},
+    "job_title": {"type": "string"},
+    "seniority": {"type": ["string", "null"]},
+    "location": {"type": "string"},
+    "employment_type": {"type": ["string", "null"]},
+    "job_url": {"type": "string"},
+    "source": {"type": "string"},
+    "date_checked": {"type": "string", "format": "date"},
+    "active_status": {"type": "boolean"},
+    "industry": {"type": ["string", "null"]},
+    "company_type": {"type": ["string", "null"]},
+    "role_summary": {"type": ["string", "null"]},
+    "responsibility_text": {"type": ["string", "null"]},
+    "requirement_text": {"type": ["string", "null"]},
+    "preferred_text": {"type": ["string", "null"]}
+  },
+  "additionalProperties": true
+}

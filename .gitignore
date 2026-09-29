@@ -1,0 +1,32 @@
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# Secrets / local config
+.env
+.env.*
+*.pem
+*.key
+
+# Terraform local state
+**/.terraform/
+*.tfstate
+*.tfstate.*
+.terraform.lock.hcl
+
+# Power BI / Tableau temp files
+*.tmp
+*.bak
+
+# Large/local exports that should not be committed by default
+market/raw/downloads/
+data/raw/local/
