@@ -1,0 +1,62 @@
+{
+  "cloud": {
+    "aws": ["aws", "amazon web services"],
+    "azure": ["azure", "microsoft azure"],
+    "gcp": ["gcp", "google cloud", "google cloud platform"]
+  },
+  "finops_capability": {
+    "cost_visibility": ["cost visibility", "cost transparency", "spend visibility"],
+    "allocation": ["cost allocation", "allocate cloud cost", "allocation"],
+    "tagging": ["tagging", "tags", "resource tag"],
+    "cost_analysis": ["cost analysis", "cost analytics", "spend analysis"],
+    "anomaly_management": ["cost anomaly", "anomaly detection", "anomaly management"],
+    "budgeting": ["budgeting", "budgets", "budget management"],
+    "forecasting": ["forecasting", "cost forecast", "spend forecast"],
+    "rightsizing": ["rightsizing", "right-sizing", "right sizing"],
+    "idle_resource_management": ["idle resource", "unused resource", "orphan resource"],
+    "usage_optimization": ["usage optimization", "utilization optimization", "resource optimization"],
+    "rate_optimization": ["rate optimization", "pricing optimization", "discount optimization"],
+    "savings_plans": ["savings plan", "savings plans"],
+    "reserved_instances": ["reserved instance", "reserved instances", "reservation management"],
+    "spot": ["spot instance", "spot instances", "spot virtual machine", "spot vm"],
+    "commitment_management": ["commitment management", "commitment utilization", "commitment coverage"],
+    "showback": ["showback"],
+    "chargeback": ["chargeback"],
+    "unit_economics": ["unit economics", "unit cost", "cost per transaction", "cost per customer"],
+    "cost_avoidance": ["cost avoidance"],
+    "realized_savings": ["realized savings", "realised savings", "savings realization", "savings realisation"],
+    "vendor_management": ["vendor management", "vendor negotiation", "cloud vendor"],
+    "licensing": ["licensing", "license optimization", "licence optimization"],
+    "procurement": ["procurement", "commercial negotiation"],
+    "governance": ["cloud governance", "finops governance", "governance"],
+    "policy": ["cloud policy", "policies", "policy enforcement"],
+    "guardrails": ["guardrail", "guardrails"],
+    "finops_operating_model": ["finops operating model", "finops practice", "finops function", "finops culture"]
+  },
+  "engineering": {
+    "sql": ["sql"],
+    "python": ["python", "pyspark"],
+    "bash": ["bash", "shell scripting"],
+    "powershell": ["powershell"],
+    "terraform": ["terraform"],
+    "bicep": ["bicep"],
+    "cicd": ["ci/cd", "cicd", "continuous integration", "continuous delivery"],
+    "api": ["api", "apis", "rest api"],
+    "automation": ["automation", "automate", "automating"],
+    "kubernetes": ["kubernetes", "k8s"],
+    "databricks": ["databricks"],
+    "snowflake": ["snowflake"],
+    "fabric": ["microsoft fabric", "fabric capacity"],
+    "power_bi": ["power bi", "powerbi"],
+    "tableau": ["tableau"],
+    "excel": ["excel", "microsoft excel"]
+  },
+  "stakeholder": {
+    "finance": ["finance team", "finance teams", "finance stakeholder", "finance organization", "finance organisation"],
+    "engineering": ["engineering team", "engineering teams", "engineering stakeholder"],
+    "procurement_stakeholder": ["procurement team", "procurement teams", "procurement stakeholder"],
+    "management": ["senior management", "executive stakeholder", "leadership team"],
+    "business_units": ["business unit", "business units", "business stakeholder"],
+    "vendor_management_stakeholder": ["vendor management team", "vendor manager", "vendor managers"]
+  }
+}

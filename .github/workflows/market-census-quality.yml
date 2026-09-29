@@ -1,0 +1,28 @@
+name: Market Census Quality
+
+on:
+  pull_request:
+    paths:
+      - 'market/**'
+      - 'python/market_census/**'
+      - 'tests/test_market_census.py'
+      - '.github/workflows/market-census-quality.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'market/**'
+      - 'python/market_census/**'
+      - 'tests/test_market_census.py'
+
+jobs:
+  validate-market-census:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Unit tests
+        run: python -m unittest tests/test_market_census.py -v
+      - name: Validate raw and evidence contracts
+        run: python python/market_census/build_market_census.py --validate-only
