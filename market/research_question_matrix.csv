@@ -1,0 +1,16 @@
+question_id,question,evidence_source,status
+RQ01,Prior cloud or engineering experience frequency,verified vacancy dataset,NOT_STARTED
+RQ02,Finance or commercial knowledge frequency,verified vacancy dataset,NOT_STARTED
+RQ03,Architecture TCO or design review frequency,verified vacancy dataset,NOT_STARTED
+RQ04,Policy-as-code IaC CI/CD or guardrails frequency,verified vacancy dataset,NOT_STARTED
+RQ05,Anomaly detection and automation frequency,verified vacancy dataset,NOT_STARTED
+RQ06,Reservations or commitments as recurring responsibility,verified vacancy dataset,NOT_STARTED
+RQ07,Showback or chargeback frequency,verified vacancy dataset,NOT_STARTED
+RQ08,Contract licensing or vendor management frequency,verified vacancy dataset,NOT_STARTED
+RQ09,Engineering Finance Procurement or business owner collaboration,verified vacancy dataset,NOT_STARTED
+RQ10,Reporting tools plus technical cloud knowledge,verified vacancy dataset,NOT_STARTED
+RQ11,Dedicated FinOps role vs embedded cloud discipline,verified vacancy dataset,NOT_STARTED
+RQ12,Shift-left FinOps evidence,official cases and guidance,NOT_STARTED
+RQ13,Automated resource-lifecycle control cases,official cases and guidance,NOT_STARTED
+RQ14,Architecture substitution cases,official cases and guidance,NOT_STARTED
+RQ15,Post-implementation realized-savings validation cases,official cases and guidance,NOT_STARTED

@@ -1,0 +1,19 @@
+{
+  "vacancy_id": "MY-FE-0001",
+  "company": "REPLACE_ME",
+  "job_title": "FinOps Engineer",
+  "seniority": null,
+  "location": "Malaysia",
+  "employment_type": null,
+  "job_url": "https://example.com/job",
+  "source": "REPLACE_ME",
+  "date_checked": "2026-09-30",
+  "active_status": true,
+  "industry": null,
+  "company_type": null,
+  "role_summary": null,
+  "responsibility_text": null,
+  "requirement_text": null,
+  "preferred_text": null,
+  "manual_overrides": {}
+}

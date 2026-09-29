@@ -1,0 +1,13 @@
+{
+  "vacancy_id": "MY-FE-0001",
+  "checked_at": "2026-09-30T00:00:00+08:00",
+  "active_status": true,
+  "title_verified": true,
+  "malaysia_verified": true,
+  "job_url": "https://example.com/job",
+  "source": "REPLACE_ME",
+  "status_evidence": "Describe how the vacancy was confirmed active.",
+  "title_evidence": "Exact title observed on source page.",
+  "location_evidence": "Evidence that the role is Malaysia-based.",
+  "notes": null
+}

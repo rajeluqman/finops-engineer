@@ -1,22 +1,75 @@
 # Malaysia FinOps Engineer Vacancy Census
 
-This folder is the canonical location for vacancy research datasets.
+This folder is the canonical location for Malaysia vacancy research datasets.
+
+## Population contract
+
+Target up to **50 currently active Malaysia vacancies** whose job title contains the contiguous phrase `FinOps Engineer`.
+
+Accepted examples:
+
+- `FinOps Engineer`
+- `Senior FinOps Engineer`
+- `FinOps Engineer II`
+- `Lead FinOps Engineer` when the role is still an IC-oriented engineering role
+
+Excluded examples:
+
+- `FinOps Analyst`
+- `Cloud Cost Analyst`
+- `Cloud Economics Analyst`
+- `Cloud Financial Management Analyst`
+- `TBM Analyst`
+- `Cloud Governance Engineer`
+- `Cloud Cost Engineer`
+
+If the verified active market contains fewer than 50 matching vacancies, stop at the verified population `N`. Never pad with related titles.
 
 ## Data lineage
 
 ```text
 source URL / job page
-  → raw/              original capture or extracted source record
-  → evidence/         traceability metadata and source checks
+  → raw/              extracted source record; source text preserved
+  → evidence/         active/title/location verification
+  → quality gates     schema, ID, URL, duplicates, evidence pairing
   → canonical CSV/JSON
   → vacancy_skill_matrix.csv
   → frequency datasets
   → ../docs/MARKET_ANALYSIS.md
 ```
 
-## Population rule
+## One vacancy = one stable ID
 
-Include only Malaysia vacancies that are active when checked and whose job title contains the contiguous phrase `FinOps Engineer`. If fewer than 50 verified roles exist, stop at the verified population instead of padding with related titles.
+Use sequential immutable IDs:
+
+```text
+MY-FE-0001
+MY-FE-0002
+MY-FE-0003
+```
+
+Never reuse an ID for a different vacancy, including after a vacancy expires.
+
+## Input pair
+
+For each vacancy create:
+
+```text
+raw/MY-FE-0001.json
+evidence/MY-FE-0001.json
+```
+
+Start from the files under `templates/`.
+
+The raw record stores source-derived vacancy fields. The evidence record separately proves whether it is eligible for the canonical active-Malaysia exact-title population.
+
+## Skill extraction
+
+`schemas/signal_taxonomy.json` defines deterministic keyword rules for cloud, FinOps capability, engineering and stakeholder signals.
+
+`manual_overrides` in the raw record may correct a false positive/negative. Overrides must be explicit booleans and may only target registered taxonomy fields.
+
+Automation does **not** infer active status, Malaysia scope, industry, company type or source credibility.
 
 ## Canonical outputs
 
@@ -32,15 +85,23 @@ Include only Malaysia vacancies that are active when checked and whose job title
 - `industry_frequency.csv`
 - `seniority_frequency.csv`
 
-## Supporting folders
+## Quality output
 
-- `raw/` — one raw record/capture per source before normalization.
-- `evidence/` — URL, checked date, active-status evidence and extraction notes.
-- `schemas/` — canonical schema/data contract.
-- `quality/` — validation results, duplicate checks, exact-title checks and population reconciliation.
+`quality/latest_validation.json` records:
 
-## Recommended vacancy ID
+- target population
+- raw/evidence counts
+- verified canonical count
+- rejected count
+- rejection reason per vacancy
+- coverage `N / 50`
 
-`MY-FE-0001`, `MY-FE-0002`, ...
+## Commands
 
-Never reuse an ID for a different vacancy.
+```bash
+make market-check
+make market-build
+make test
+```
+
+`make market-check` is safe for pre-commit validation because it does not rewrite generated datasets.

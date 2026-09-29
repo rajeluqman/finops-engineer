@@ -1,0 +1,11 @@
+{
+  "generated_at": "2026-09-30T02:03:00+08:00",
+  "target_population_requested": 50,
+  "raw_record_count": 0,
+  "evidence_record_count": 0,
+  "verified_active_exact_title_population": 0,
+  "coverage": "0 / 50",
+  "rejected_count": 0,
+  "rejected": [],
+  "status": "PASS"
+}
